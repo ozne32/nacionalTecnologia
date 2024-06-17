@@ -1,0 +1,56 @@
+section.module p {
+    margin-bottom: 40px;
+}
+
+section.module:last-child {
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.borda-verde{
+    border-bottom: 4px green solid;
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh !important;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax:after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+
+}
+
+
+section.module.parallax-1 {
+    background-image: url(img/imagem_fundo_inicio.jpg);
+}
+
+section.module.parallax-2 {
+    background-image: url(img/computador.jpg)
+}
+
+#paralax-contactus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20vh !important;
+    background-position-y:100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
