@@ -58,7 +58,7 @@ section.module.parallax::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 20vh !important;
+    height: 30vh !important;
     background-position-y:100%;
     position: relative;
     background-repeat: no-repeat;
