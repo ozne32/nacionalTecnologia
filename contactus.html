@@ -7,7 +7,9 @@
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
 <link rel="stylesheet" href="style.css">
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/3a7cbcc65c.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,37 +56,49 @@
                 </p>
                 <form>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><p class="font-weight-bold">Nome*</p></label>
-                        <div class="col-sm-10">
-                            <input class="form-control " type="text" >
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><p class="font-weight-bold">Número de Telefone*</p></label>
-                        <div class="col-sm-10">
-                            <input class="form-control " type="number" >
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><p class="font-weight-bold">E-mail*</p></label>
-                        <div class="col-sm-10">
-                            <input class="form-control " type="email" >
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><p class="font-weight-bold">Empresa*</p></label>
+                        <label class="col-sm-2 col-form-label">
+                            <p class="font-weight-bold">Nome*</p>
+                        </label>
                         <div class="col-sm-10">
                             <input class="form-control " type="text">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><p class="font-weight-bold">Assunto*</p></label>
+                        <label class="col-sm-2 col-form-label">
+                            <p class="font-weight-bold">Número de Telefone*</p>
+                        </label>
+                        <div class="col-sm-10">
+                            <input class="form-control " type="number">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            <p class="font-weight-bold">E-mail*</p>
+                        </label>
+                        <div class="col-sm-10">
+                            <input class="form-control " type="email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            <p class="font-weight-bold">Empresa*</p>
+                        </label>
                         <div class="col-sm-10">
                             <input class="form-control " type="text">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label"><p class="font-weight-bold">Pergunta*</p></label>
+                        <label class="col-sm-2 col-form-label">
+                            <p class="font-weight-bold">Assunto*</p>
+                        </label>
+                        <div class="col-sm-10">
+                            <input class="form-control " type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            <p class="font-weight-bold">Pergunta*</p>
+                        </label>
                         <div class="col-sm-10">
                             <input class="form-control" type="text">
                         </div>
@@ -93,50 +107,66 @@
                 </form>
             </div>
             <div class="col-md-4 mt-5">
-                <p>Nacional Tecnologia 
+                <p>Nacional Tecnologia
                     <br>
-                    <i class="fa-solid fa-location-dot"></i>  Avenida Nicolas Boer, 399 - 3° Andar
+                    <i class="fa-solid fa-location-dot"></i> Avenida Nicolas Boer, 399 - 3° Andar
                     <br>
-                    <i class="fa-solid fa-phone"></i>  +55 11 2122-4060
+                    <i class="fa-solid fa-phone"></i> +55 11 2122-4060
                     <br>
-                    <i class="fa-solid fa-envelope"></i>  contato@nacionaltecnologia.com.br
+                    <i class="fa-solid fa-envelope"></i> contato@nacionaltecnologia.com.br
                 </p>
             </div>
         </div>
     </div>
     <footer class="mt-5" style="background-color: green;">
-       <div class="row justify-content-around">
-        <div class="col-md-">
-            <div class="row">
+        <div class="container">
+            <div class="row justify-content-around">
                 <div class="col-md-">
-                    <h3 class="font-weight-normal mt-5 text-white">Entre em contato</h3> <br>
-                    <i class="fa-solid fa-envelope mb-3 text-white" ></i> &nbsp;  <a class="stretched-link" style="color: rgb(39, 209, 39);" href="*">contato@nacionaltecnologia.com.br</a> <br>
-                    <i class="fa-solid fa-phone mb-3 text-white"></i> <span style="color: rgb(39, 209, 39);">+55 11 2122-4060</span>
+                    <div class="row">
+                        <div class="col-md-">
+                            <h3 class="font-weight-normal mt-5 text-white">Entre em contato</h3> <br>
+                            <i class="fa-solid fa-envelope mb-3 text-white"></i> &nbsp; <a
+                                style="color: rgb(39, 209, 39);" href="*">contato@nacionaltecnologia.com.br</a> <br>
+                            <i class="fa-solid fa-phone mb-3 text-white"></i> <span style="color: rgb(39, 209, 39);">+55
+                                11 2122-4060</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-">
+                    <div class="row">
+                        <div class="col-md-">
+                            <h3 class="font-weight-normal mt-5 text-white mb-4">Empresa</h3>
+                            <p style="color: rgb(39, 209, 39);">Avenida Nicolas Boer, 399 - 3° Andar</p>
+                            <p style="color: rgb(39, 209, 39);"> Jardim das Perdizes - São Paulo - SP</p>
+                            <p style="color: rgb(39, 209, 39);"> CEP: 01140-060</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-">
+                    <div class="row">
+                        <div class="col-md-">
+                            <h3 class="font-weight-normal mt-5 text-white">Siga-nos</h3> <br>
+                            <i class="mb-4 fa-brands fa-xl fa-facebook text-white"></i><a href="*"
+                                style="color: rgb(39, 209, 39);"> Facebook </a><br>
+                            <i class="mb-4 fa-brands fa-xl fa-square-twitter text-white"></i><a href="*"
+                                style="color: rgb(39, 209, 39);"> Twitter </a> <br>
+                            <i class="mb-4 fa-brands fa-xl fa-linkedin text-white"></i><a href="*"
+                                style="color: rgb(39, 209, 39);"> Linkedin </a><br>
+                            <i class="mb-5 fa-brands fa-xl fa-instagram text-white"></i><a href="*"
+                                style="color: rgb(39, 209, 39);"> Instagram</a> <br>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-">
-            <div class="row">
-                <div class="col-md-">
-                    <h3 class="font-weight-normal mt-5 text-white">Empresa</h3> <br>
-                    <p style="color: rgb(39, 209, 39);" class="mb-3">Avenida Nicolas Boer, 399 - 3° Andar</p> <br>
-                     <p style="color: rgb(39, 209, 39);" class="mb-3"> Jardim das Perdizes - São Paulo - SP</p>
-                     <p style="color: rgb(39, 209, 39);" class="mb-3"> CEP: 01140-060</p>
+        <div class="row p-3" style="background-color: rgb(3, 94, 3);">
+                <div class="col-md-6 text-center">
+                    <p style="color: rgba(255, 255, 255, 0.676);">Copyright &copy; Nacional Tecnologia - 2023</p>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-">
-            <div class="row">
-                <div class="col-md-">
-                    <h3 class="font-weight-normal mt-5 text-white">Siga-nos</h3> <br>
-                    <i class="mb-3 fa-brands fa-xl fa-facebook text-white"></i><a class="stretched-link" href="*" style="color: rgb(39, 209, 39);"> Facebook </a><br>
-                    <i class="mb-3 fa-brands fa-xl fa-square-twitter text-white"></i><a class="stretched-link" href="*" style="color: rgb(39, 209, 39);"> Twitter </a> <br>
-                    <i class="mb-3 fa-brands fa-xl fa-linkedin text-white"></i><a class="stretched-link" href="*" style="color: rgb(39, 209, 39);"> Linkedin </a><br>
-                    <i class="mb-3 fa-brands fa-xl fa-instagram text-white"></i><a class="stretched-link" href="*" style="color: rgb(39, 209, 39);"> Instagram</a> <br>
+                <div class="col-md-6 text-center">
+                    <p style="color: rgba(255, 255, 255, 0.676);">Powered by CLOUD4ERP - Performance e Controle</p>
                 </div>
-            </div>
         </div>
-       </div>
     </footer>
 
 </body>

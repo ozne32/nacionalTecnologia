@@ -1,3 +1,6 @@
+body{
+    overflow-x:hidden ;
+}
 section.module p {
     margin-bottom: 40px;
 }
@@ -19,7 +22,7 @@ section.module.parallax {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vh !important;
+    height: 100vh !important;
     position: relative;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,18 +34,26 @@ section.module.parallax:after {
     width: 100%;
     position: absolute;
     z-index: 8;
-
 }
 
 
 section.module.parallax-1 {
-    background-image: url(img/imagem_fundo_inicio.jpg);
+    background-image:  url(img/imagem_fundo_inicio.jpg);
 }
 
 section.module.parallax-2 {
-    background-image: url(img/computador.jpg)
+    background-image:  url(img/computador.jpg);
 }
-
+section.module.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
 #paralax-contactus{
     display: flex;
     flex-direction: column;
@@ -53,4 +64,7 @@ section.module.parallax-2 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+.borda-plano{
+    border: 1px green solid;
 }
