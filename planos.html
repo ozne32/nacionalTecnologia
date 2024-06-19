@@ -13,12 +13,12 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-    
-    <script src="https://kit.fontawesome.com/3a7cbcc65c.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/3a7cbcc65c.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: white !important;">
-    <header >
+<body>
+    <header>
         <!-- Navbar -->
         <nav class="borda-verde navbar navbar-expand-sm navbar-white navbar-light fixed-top">
             <a href="index.html" class="navbar-brand ml-5">
@@ -49,7 +49,8 @@
     </header>
     <main class="mt-5">
         <section class="module parallax parallax-2 overlay" id="paralax-contactus">
-            <h1 class="display-5 font-weight-bold text-white mt-5 ml-5" style="z-index: 2; color:white">Nossos Planos</h1>
+            <h1 class="display-5 font-weight-bold text-white mt-5 ml-5" style="z-index: 2; color:white">Nossos Planos
+            </h1>
         </section>
     </main>
     <div class="container mt-5">
@@ -78,7 +79,8 @@
                     </div>
                     <div style="background-color: rgb(2, 90, 2);">
                         <div class="row justify-content-center">
-                            <a href="contactus.html" class="btn btn-success mt-5 mb-5" style="background-color: green;">Iniciar agora</a>
+                            <a href="contactus.html" class="btn btn-success mt-5 mb-5"
+                                style="background-color: green;">Iniciar agora</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +101,7 @@
                     <div class="bg-light">
                         <p class="text-center mt-3">Tudo do Iniciante + </p>
                         <hr>
-                        <p class="text-center">CRM completo para equipes de qualquer tamanhoo</p>
+                        <p class="text-center">CRM completo para equipes de qualquer tamanho</p>
                         <hr>
                         <p class="text-center">NFSEs limitadas</p>
                         <hr>
@@ -107,7 +109,8 @@
                     </div>
                     <div style="background-color: rgb(2, 90, 2);">
                         <div class="row justify-content-center">
-                            <a href="contactus.html" class="btn btn-success mt-5 mb-5" style="background-color: green;">Iniciar agora</a>
+                            <a href="contactus.html" class="btn btn-success mt-5 mb-5"
+                                style="background-color: green;">Iniciar agora</a>
                         </div>
                     </div>
                 </div>
@@ -136,64 +139,62 @@
                     </div>
                     <div style="background-color: rgb(2, 90, 2);">
                         <div class="row justify-content-center">
-                            <a href="contactus.html" class="btn btn-success mt-5 mb-5" style="background-color: green;">Iniciar agora</a>
+                            <a href="contactus.html" class="btn btn-success mt-5 mb-5"
+                                style="background-color: green;">Iniciar agora</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="mt-5" style="background-color: green;">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-md-">
-                    <div class="row">
-                        <div class="col-md-">
-                            <h3 class="font-weight-normal mt-5 text-white">Entre em contato</h3> <br>
-                            <i class="fa-solid fa-envelope mb-3 text-white"></i> &nbsp; <a
-                                style="color: rgb(39, 209, 39);" href="*">contato@nacionaltecnologia.com.br</a> <br>
-                            <i class="fa-solid fa-phone mb-3 text-white"></i> <span style="color: rgb(39, 209, 39);">+55
-                                11 2122-4060</span>
-                        </div>
-                    </div>
+    <div class='row fixed-bottom display' id="chatBox">
+        <div class="col-md-4 ml-auto">
+            <div class="card bg-light" style="margin-bottom:0">
+                <div class="card-header bg-success">
+                    <p class="card-title" style="font-size:13px;margin-left: 0;">Bot de boas vindas</p>
+                    <a type="button" class="btn btn-tool" data-card-widget="remove" id="sair"
+                        onmouseenter="clicavel('#sair')">
+                        <i class="fas fa-times mb-2 ml-auto"></i>
+                    </a>
                 </div>
-                <div class="col-md-">
-                    <div class="row">
-                        <div class="col-md-">
-                            <h3 class="font-weight-normal mt-5 text-white mb-4">Empresa</h3>
-                            <p style="color: rgb(39, 209, 39);">Avenida Nicolas Boer, 399 - 3° Andar</p>
-                            <p style="color: rgb(39, 209, 39);"> Jardim das Perdizes - São Paulo - SP</p>
-                            <p style="color: rgb(39, 209, 39);"> CEP: 01140-060</p>
+
+                <div class="card-body bg-light">
+                    <div class="direct-chat-messages">
+                        <div class="direct-chat-msg">
+                            <div class="direct-chat-infos clearfix">
+                                <span class="direct-chat-name float-left">Bot de atendimento</span>
+                                <span class="direct-chat-timestamp float-right" style="color:rgb(187, 181, 181)">- 2
+                                    horas
+                                    atrás </span>
+                            </div>
+                            <i class="fa-regular fa-face-smile fa-2x direct-chat-img" style="color:purple"></i>
+                            <div class="direct-chat-text" style="background-color: rgb(224, 244, 224);">
+                                <small>Bem vindo à nacional tecnologia</small>
+                            </div>
+                            <div class="direct-chat-text mb-5" style="background-color: rgb(224, 244, 224);">
+                                <small>O que você está procurando?</small>
+                                <a href="planos.html" class="btn btn-outline-success font-weight-bold mb-2"
+                                    style="font-size: 0.75em; color:black;">Eu tenho uma dúvida sobre o preço</a>
+                                <a href="index.html" class="btn btn-outline-success font-weight-bold mb-2"
+                                    style="font-size: 0.75em; color:black;">Estou procurando a sua documentação</a>
+                                <a href="contactus.html" class="btn btn-outline-success font-weight-bold "
+                                    style="font-size: 0.75em; color:black;">Só estou dando uma olhada</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-">
-                    <div class="row">
-                        <div class="col-md-">
-                            <h3 class="font-weight-normal mt-5 text-white">Siga-nos</h3> <br>
-                            <i class="mb-4 fa-brands fa-xl fa-facebook text-white"></i><a href="*"
-                                style="color: rgb(39, 209, 39);"> Facebook </a><br>
-                            <i class="mb-4 fa-brands fa-xl fa-square-twitter text-white"></i><a href="*"
-                                style="color: rgb(39, 209, 39);"> Twitter </a> <br>
-                            <i class="mb-4 fa-brands fa-xl fa-linkedin text-white"></i><a href="*"
-                                style="color: rgb(39, 209, 39);"> Linkedin </a><br>
-                            <i class="mb-5 fa-brands fa-xl fa-instagram text-white"></i><a href="*"
-                                style="color: rgb(39, 209, 39);"> Instagram</a> <br>
-                        </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer"
+                        style="border-top: 1px gray solid; background-color: rgb(219, 212, 212);margin: 0% -5% -5% -5%;">
+                        <small style="margin-left: 30%;">
+                            <i>Selecione uma opção acima</i>
+                        </small>
                     </div>
+                    <!-- /.card-footer-->
                 </div>
             </div>
         </div>
-        <div class="row p-3" style="background-color: rgb(3, 94, 3);">
-            <div class="col-md-6 text-center">
-                <p style="color: rgba(255, 255, 255, 0.676);">Copyright &copy; Nacional Tecnologia - 2023</p>
-            </div>
-            <div class="col-md-6 text-center">
-                <p style="color: rgba(255, 255, 255, 0.676);">Powered by CLOUD4ERP - Performance e Controle</p>
-            </div>
-        </div>
-    </footer>
-<!-- bot de conversas, está em widgets -->
+    </div>
+    <!-- bot de conversas, está em widgets -->
 </body>
 
 </html>

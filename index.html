@@ -13,6 +13,7 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/3a7cbcc65c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 
 <body style="background-color: white !important;">
@@ -138,7 +139,7 @@
                     <div class="bg-light">
                         <p class="text-center mt-3">Tudo do Iniciante + </p>
                         <hr>
-                        <p class="text-center">CRM completo para equipes de qualquer tamanhoo</p>
+                        <p class="text-center">CRM completo para equipes de qualquer tamanho</p>
                         <hr>
                         <p class="text-center">NFSEs limitadas</p>
                         <hr>
@@ -180,6 +181,51 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class='row fixed-bottom display' id="chatBox">
+        <div class="col-md-4 ml-auto">
+            <div class="card bg-light" style="margin-bottom:0">
+                <div class="card-header bg-success">
+                    <p class="card-title" style="font-size:13px;margin-left: 0;">Bot de boas vindas</p>
+                    <a type="button" class="btn btn-tool" data-card-widget="remove" id="sair"
+                        onmouseenter="clicavel('#sair')">
+                        <i class="fas fa-times mb-2 ml-auto"></i>
+                    </a>
+                </div>
+            
+            <div class="card-body bg-light">
+                <div class="direct-chat-messages">
+                    <div class="direct-chat-msg">
+                        <div class="direct-chat-infos clearfix">
+                            <span class="direct-chat-name float-left">Bot de atendimento</span>
+                            <span class="direct-chat-timestamp float-right" style="color:rgb(187, 181, 181)">- 2 horas
+                                atrás </span>
+                        </div>
+                        <i class="fa-regular fa-face-smile fa-2x direct-chat-img" style="color:purple"></i>
+                        <div class="direct-chat-text" style="background-color: rgb(224, 244, 224);">
+                            <small>Bem vindo à nacional tecnologia</small>
+                        </div>
+                        <div class="direct-chat-text mb-5" style="background-color: rgb(224, 244, 224);">
+                            <small>O que você está procurando?</small>
+                            <a href="planos.html" class="btn btn-outline-success font-weight-bold mb-2"
+                                style="font-size: 0.75em; color:black;">Eu tenho uma dúvida sobre o preço</a>
+                            <a href="index.html" class="btn btn-outline-success font-weight-bold mb-2"
+                                style="font-size: 0.75em; color:black;">Estou procurando a sua documentação</a>
+                            <a href="contactus.html" class="btn btn-outline-success font-weight-bold "
+                                style="font-size: 0.75em; color:black;">Só estou dando uma olhada</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer" style="border-top: 1px gray solid; background-color: rgb(219, 212, 212);margin: 0% -5% -5% -5%;">
+                    <small style="margin-left: 30%;">
+                        <i >Selecione uma opção acima</i>
+                    </small>
+                </div>
+                <!-- /.card-footer-->
+            </div>
+        </div>
         </div>
     </div>
     <footer class="mt-5" style="background-color: green;">
