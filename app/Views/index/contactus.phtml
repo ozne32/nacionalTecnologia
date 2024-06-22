@@ -1,0 +1,81 @@
+<main class="mt-5">
+    <section class="module parallax parallax-2 overlay" id="paralax-contactus">
+        <h1 class="display-5 font-weight-bold text-white mt-5 ml-5" style="z-index: 2; color:white">Entre em contato
+        </h1>
+    </section>
+</main>
+<div class="container">
+    <div class="row justify-content-around">
+        <div class="col-md-7">
+            <p class="mt-5">Entre em contato conosco sobre qualquer coisa relacionada á nossa empresa ou serviços.
+                <br> Retornaremos o mais breve possível
+            </p>
+            <form action="/processa_dados" method="post" >
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        <p class="font-weight-bold">Nome*</p>
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control " name="nome" type="text">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        <p class="font-weight-bold">Telefone*</p>
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control " name="telefone" type="number">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        <p class="font-weight-bold">E-mail*</p>
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control " name="email" type="email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        <p class="font-weight-bold" name="empresa">Empresa*</p>
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control " type="text">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        <p class="font-weight-bold" name="assunto">Assunto*</p>
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control " type="text">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        <p class="font-weight-bold" name="pergunta">Pergunta*</p>
+                    </label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg" style="margin-left:17%">Enviar</button>
+            </form>
+        </div>
+        <div class="col-md-4 mt-5">
+            <p>Nacional Tecnologia
+                <br>
+                <i class="fa-solid fa-location-dot"></i> Avenida Nicolas Boer, 399 - 3° Andar
+                <br>
+                <i class="fa-solid fa-phone"></i> +55 11 2122-4060
+                <br>
+                <i class="fa-solid fa-envelope"></i> contato@nacionaltecnologia.com.br
+            </p>
+        </div>
+    </div>
+</div>
+<div class="chat ml-auto text-center mr-3 fixed-bottom mb-4   " id="chat-click" onmouseenter="clicavel('#chat-click')">
+    <a type="button"><i class="fa-solid fa-xl fa-comment-dots mt-4 text-white"></i></a>
+</div>
+<?php require_once 'chat.phtml'?>
+

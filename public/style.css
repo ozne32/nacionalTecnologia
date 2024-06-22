@@ -71,6 +71,11 @@ section.module.parallax::before {
 .borda-plano{
     border: 1px green solid;
 }
+.teste123{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
 .chat{
     background-color: rgb(16, 192, 107);
     width: 50px;

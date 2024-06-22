@@ -1,0 +1,105 @@
+<main class="mt-5">
+    <section class="module parallax parallax-2 overlay" id="paralax-contactus">
+        <h1 class="display-5 font-weight-bold text-white mt-5 ml-5" style="z-index: 2; color:white">Nossos Planos</h1>
+    </section>
+</main>
+<div class="container mt-5">
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="card-header" style="background-color: rgb(2, 90, 2);">
+                    <h3 class="text-white text-center">Iniciante</h3>
+                </div>
+                <div class="card-body borda-plano" style="background-color: rgb(212, 241, 212);">
+                    <p class="text-center">
+                        <span class="display-5 font-weight-normal">R$</span>
+                        <span class="display-3 font-weight-bold">99</span>
+                        <span class="display-5 font-weight-normal">,00</span>
+                    <p class="text-center" style="font-size: 12px;"> / mês</p>
+                    </p>
+                </div>
+                <div class="bg-light">
+                    <p class="text-center mt-3">Vendas e Faturamento</p>
+                    <hr>
+                    <p class="text-center">Contatos e Agenda(Integração Google e Microsoft)</p>
+                    <hr>
+                    <p class="text-center">20 NFSEs Nacional</p>
+                    <hr>
+                    <p class="text-center">Suporte por Ticket</p>
+                </div>
+                <div style="background-color: rgb(2, 90, 2);">
+                    <div class="row justify-content-center">
+                        <a href="contactus.html" class="btn btn-success mt-5 mb-5"
+                            style="background-color: green;">Iniciar agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header" style="background-color: rgb(2, 90, 2);">
+                    <h3 class="text-white text-center">Profissional</h3>
+                </div>
+                <div class="card-body borda-plano" style="background-color: rgb(212, 241, 212);">
+                    <p class="text-center">
+                        <span class="display-5 font-weight-normal">R$</span>
+                        <span class="display-3 font-weight-bold">169</span>
+                        <span class="display-5 font-weight-normal">,00</span>
+                    </p>
+                    <p class="text-center" style="font-size: 12px;"> / mês</p>
+                </div>
+                <div class="bg-light">
+                    <p class="text-center mt-3">Tudo do Iniciante + </p>
+                    <hr>
+                    <p class="text-center">CRM completo para equipes de qualquer tamanho</p>
+                    <hr>
+                    <p class="text-center">NFSEs limitadas</p>
+                    <hr>
+                    <p class="text-center">Suporte por Ticket e Email</p>
+                </div>
+                <div style="background-color: rgb(2, 90, 2);">
+                    <div class="row justify-content-center">
+                        <a href="contactus.html" class="btn btn-success mt-5 mb-5"
+                            style="background-color: green;">Iniciar agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="card-header" style="background-color: rgb(2, 90, 2);">
+                    <h3 class="text-white text-center">Especialista</h3>
+                </div>
+                <div class="card-body borda-plano" style="background-color: rgb(212, 241, 212);">
+                    <p class="text-center">
+                        <span class="display-5 font-weight-normal">R$</span>
+                        <span class="display-3 font-weight-bold">275</span>
+                        <span class="display-5 font-weight-normal">,00</span>
+                    </p>
+                    <p class="text-center" style="font-size: 12px;"> / mês</p>
+                </div>
+                <div class="bg-light">
+                    <p class="text-center mt-3">Tudo do Profissional +</p>
+                    <hr>
+                    <p class="text-center">RH(Recrutamento e Avaliações)</p>
+                    <hr>
+                    <p class="text-center">Projetos e Marketing (Email Marketing e Pesquisas)</p>
+                    <hr>
+                    <p class="text-center">Suporte por Ticket, Email e Telefone</p>
+                </div>
+                <div style="background-color: rgb(2, 90, 2);">
+                    <div class="row justify-content-center">
+                        <a href="contactus.html" class="btn btn-success mt-5 mb-5"
+                            style="background-color: green;">Iniciar agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php if(isset($_GET['procura'])){
+    require_once 'chat.phtml';
+}?>
+<script>
+    $('#chatBox').removeClass('display')
+</script>
