@@ -11,4 +11,5 @@ $(document).ready(()=>{
     function clicavel(elemento){
         $(elemento).css('cursor', 'pointer');
     }
+        
 })

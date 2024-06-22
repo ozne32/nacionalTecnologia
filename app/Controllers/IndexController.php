@@ -2,10 +2,14 @@
 
 namespace App\Controllers;
 
+require  __DIR__ ."/../PHPMailer/Exception.php";
+require  __DIR__ ."/../PHPMailer/SMTP.php";
+require  __DIR__ ."/../PHPMailer/POP3.php";
+require  __DIR__ ."/../PHPMailer/PHPMailer.php";
+require __DIR__ ."/../PHPMailer/OAuth.php";
 use MF\Controller\Action;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
 class Mensagem
 {
@@ -27,10 +31,11 @@ class Mensagem
     }
     public function validaMensagem()
     {
-        if ($this->destino != null && $this->assunto != null && $this->mensagem != null) {
-            return true;
+        if (empty($this->email) || empty($this->assunto) || 
+        empty($this->empresa) || empty($this->telefone)|| empty($this->pergunta)) {
+            return false; //se tudo estiver vazio retorne falso
         } else {
-            return false;
+            return true;
         }
     }
 }
@@ -61,20 +66,30 @@ class IndexController extends Action
         $mensagem->__set('empresa', $_POST['empresa']);
         $mensagem->__set('assunto', $_POST['assunto']);
         $mensagem->__set('pergunta', $_POST['pergunta']);
-        $mensagem->__set('mensagem', "<h3>Nome:$mensagem->nome</h3> <br> <h3>Email:$mensagem->email</h3> <br> <p>Empresa: $mensagem->empresa</p> <br>
-        <p>Assunto: $mensagem->assunto</p> <br> <p>Pergunta: $mensagem->pergunta</p> <br> <p>Telefone: $mensagem->telefone</p> <br>");
+        $mensagem->__set('mensagem', "<h3>Nome:$mensagem->nome</h3><h3>Email:$mensagem->email</h3><h3>Empresa: $mensagem->empresa</h3>
+         <h3>Pergunta:</h3> <h4>$mensagem->pergunta</h4> <h3>Telefone:</h3><strong>$mensagem->telefone</strong>");
 
         if (!$mensagem->validaMensagem()) {
-            echo 'mensagem inválidada';
             //die(); //função nativa do php que mata o processo da aplicação
-            header('location: index.php?preenchimento=erro');
+            header('location:/contactus?preenchimento=erro');
+            // echo '<pre>';
+            // print_r($mensagem);
+            // echo '</pre>';
         }
-
         try {
+<<<<<<< HEAD
            
+=======
+            //colocar as configurações do server
+            // echo '<pre>';
+            // print_r($mail);
+            // echo '</pre>';            
+
+>>>>>>> 3e4c3a9 (finalizando o site)
             //Recipients -> remetente
-            $mail->setFrom($mensagem->__get('destino'), $mensagem->__get('nome'));
-            $mail->addAddress($mensagem->__get('destino'));     //Add a recipient
+            $mail->setFrom('enzorcc.mf3rs@gmail.com', 'enzo'); //remetente
+            $mail->addAddress('enzorcc.mf3rs@gmail.com');
+            // $mail->addAddress($mensagem->__get('email'), 'Seu email já foi encaminhado para a assistência tecnica');     //destinatário
             // $mail->addReplyTo('info@example.com', 'Information'); isso é o email que vai receber a resposta do email acima
             //$mail->addCC('cc@example.com');
             // $mail->addBCC('bcc@example.com');
@@ -87,11 +102,14 @@ class IndexController extends Action
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = $mensagem->__get('assunto');
             $mail->Body = $mensagem->__get('mensagem');
-            $mail->AltBody = 'é necessário que você tenha a opção de ver conteúdo HTML, para você conseguir ter acesso total à este conteúdo';
-
+            $mail->AltBody = strip_tags($mensagem->__get('mensagem'));
             $mail->send();
+            // $mail->AltBody = "Nome:$mensagem->nome  Email:$mensagem->email Empresa: $mensagem->empresa 
+            // Pergunta: $mensagem->pergunta Telefone: $mensagem->telefone";
+            // $mail->send();
             $mensagem->__set("status['codigo_status']", 1);
             $mensagem->__set("status['descricao_status']", 'sua mensagem foi enviada');
+            header('location: /contactus?mensagem=enviada');
         } catch (Exception $e) {
             $mensagem->__set("status['codigo_status']", 2);
             $mensagem->__set("status['descricao_status']", 'Sua mensagem não foi mandada. Detalhes sobre o erro ' . $mail->ErrorInfo);

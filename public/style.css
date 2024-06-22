@@ -82,10 +82,22 @@ section.module.parallax::before {
     height: 50px;
     border-radius: 50%;
 }
+#load{
+    animation: rodar 3s linear infinite
+}
+@keyframes rodar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}
 @media (max-width:576px) {
     footer .row{
         display: flex;
         flex-direction: column;
+        padding-left: 10px;
     }
   }
 
@@ -94,6 +106,7 @@ section.module.parallax::before {
     footer .row{
         display: flex;
         flex-direction: column;
+        padding-left: 10px;
     }
   }
 

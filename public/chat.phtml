@@ -11,7 +11,7 @@
 
             <div class="card-body bg-light">
                 <!-- para o scroll funcionar, tem que estar referenciando aquis -->
-                <div class="direct-chat-messages"> 
+                <div class="direct-chat-messages">
                     <div class="direct-chat-msg">
                         <div class="direct-chat-infos clearfix">
                             <span class="direct-chat-name float-left">Bot de atendimento</span>
@@ -29,7 +29,7 @@
                             <a href="/?procura=documentacao" id="redirecionaIndex"
                                 class="btn btn-outline-success font-weight-bold mb-2"
                                 style="font-size: 0.75em; color:black;">Estou procurando a sua documentação</a>
-                            <a href="/contactus?procura=olhada" id="redirecionaMesma"
+                            <a href="<?=$_SESSION['pag']?>" id="redirecionaMesma"
                                 class="btn btn-outline-success font-weight-bold "
                                 style="font-size: 0.75em; color:black;">Só estou dando uma olhada</a>
                         </div>
@@ -69,6 +69,27 @@
                                         scrollTop: $('.direct-chat-messages')[0].scrollHeight
                                     }, 1600);
                                 });
+                            </script>
+                            <i class="fa-solid fa-spinner fa-xl mt-4" style="margin-left:25%" id="load"></i>
+                            <div class="direct-chat-text display" style="background-color: rgb(224, 244, 224);" id="chat">
+                                <small>O que você está procurando?</small>
+                                <a href="/pricing?procura=preco" class="btn btn-outline-success font-weight-bold mb-2"
+                                    style="font-size: 0.75em; color:black;">Eu tenho uma dúvida sobre o preço</a>
+                                <a href="/?procura=documentacao" id="redirecionaIndex"
+                                    class="btn btn-outline-success font-weight-bold mb-2"
+                                    style="font-size: 0.75em; color:black;">Estou procurando a sua documentação</a>
+                                <a href="<?=$_SESSION['pag']?>" id="redirecionaMesma"
+                                    class="btn btn-outline-success font-weight-bold "
+                                    style="font-size: 0.75em; color:black;">Só estou dando uma olhada</a>
+                            </div>
+                            <script>
+                                setTimeout(() => {
+                                    $('#load').addClass('display')
+                                    $('#chat').removeClass('display')
+                                    $('.direct-chat-messages').animate({
+                                        scrollTop: $('.direct-chat-messages')[0].scrollHeight
+                                    }, 1000);
+                                }, 2000)
                             </script>
                         <? } ?>
                     </div>
