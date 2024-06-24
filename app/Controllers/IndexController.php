@@ -33,9 +33,9 @@ class Mensagem
     {
         if (empty($this->email) || empty($this->assunto) || 
         empty($this->empresa) || empty($this->telefone)|| empty($this->pergunta)) {
-            return false; //se tudo estiver vazio retorne falso
+            return true; //se tudo estiver vazio retorne falso
         } else {
-            return true;
+            return false;
         }
     }
 }
@@ -67,53 +67,54 @@ class IndexController extends Action
         $mensagem->__set('assunto', $_POST['assunto']);
         $mensagem->__set('pergunta', $_POST['pergunta']);
         $mensagem->__set('mensagem', "<h3>Nome:$mensagem->nome</h3><h3>Email:$mensagem->email</h3><h3>Empresa: $mensagem->empresa</h3>
-         <h3>Pergunta:</h3> <h4>$mensagem->pergunta</h4> <h3>Telefone:</h3><strong>$mensagem->telefone</strong>");
+         <h3>Pergunta:</h3> <h2>$mensagem->pergunta</h2> <h3>Telefone:</h3><strong>$mensagem->telefone</strong>");
 
-        if (!$mensagem->validaMensagem()) {
+        if ($mensagem->validaMensagem()) {
             //die(); //função nativa do php que mata o processo da aplicação
             header('location:/contactus?preenchimento=erro');
             // echo '<pre>';
             // print_r($mensagem);
             // echo '</pre>';
+        }else{
+            try {
+                $mail = new PHPMailer(true);//precisa gerar um objeto, pq se não daonde ia estar saindo tudo dps ?
+                //Server settings -> email que você vai usar como servidor
+                                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+                // echo '<pre>';
+                // print_r($mail);
+                // echo '</pre>';            
+    
+                //Recipients -> remetente
+                $mail->setFrom('enzorcc.mf3rs@gmail.com', 'enzo'); //remetente
+                $mail->addAddress('enzorcc.mf3rs@gmail.com');
+                // $mail->addAddress($mensagem->__get('email'), 'Seu email já foi encaminhado para a assistência tecnica');     //destinatário
+                // $mail->addReplyTo('info@example.com', 'Information'); isso é o email que vai receber a resposta do email acima
+                //$mail->addCC('cc@example.com');
+                // $mail->addBCC('bcc@example.com');
+    
+                //Attachments
+                // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+    
+                //Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = $mensagem->__get('assunto');
+                $mail->Body = $mensagem->__get('mensagem');
+                $mail->AltBody = strip_tags($mensagem->__get('mensagem'));
+                $mail->send();
+                // $mail->AltBody = "Nome:$mensagem->nome  Email:$mensagem->email Empresa: $mensagem->empresa 
+                // Pergunta: $mensagem->pergunta Telefone: $mensagem->telefone";
+                // $mail->send();
+                $mensagem->__set("status['codigo_status']", 1);
+                $mensagem->__set("status['descricao_status']", 'sua mensagem foi enviada');
+                
+                header('location: /contactus?mensagem=enviada');
+            } catch (Exception $e) {
+                $mensagem->__set("status['codigo_status']", 2);
+                $mensagem->__set("status['descricao_status']", 'Sua mensagem não foi mandada. Detalhes sobre o erro ' . $mail->ErrorInfo);
+            }
         }
-        try {
-<<<<<<< HEAD
-           
-=======
-            //colocar as configurações do server
-            // echo '<pre>';
-            // print_r($mail);
-            // echo '</pre>';            
-
->>>>>>> 3e4c3a9 (finalizando o site)
-            //Recipients -> remetente
-            $mail->setFrom('enzorcc.mf3rs@gmail.com', 'enzo'); //remetente
-            $mail->addAddress('enzorcc.mf3rs@gmail.com');
-            // $mail->addAddress($mensagem->__get('email'), 'Seu email já foi encaminhado para a assistência tecnica');     //destinatário
-            // $mail->addReplyTo('info@example.com', 'Information'); isso é o email que vai receber a resposta do email acima
-            //$mail->addCC('cc@example.com');
-            // $mail->addBCC('bcc@example.com');
-
-            //Attachments
-            // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
-            //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $mensagem->__get('assunto');
-            $mail->Body = $mensagem->__get('mensagem');
-            $mail->AltBody = strip_tags($mensagem->__get('mensagem'));
-            $mail->send();
-            // $mail->AltBody = "Nome:$mensagem->nome  Email:$mensagem->email Empresa: $mensagem->empresa 
-            // Pergunta: $mensagem->pergunta Telefone: $mensagem->telefone";
-            // $mail->send();
-            $mensagem->__set("status['codigo_status']", 1);
-            $mensagem->__set("status['descricao_status']", 'sua mensagem foi enviada');
-            header('location: /contactus?mensagem=enviada');
-        } catch (Exception $e) {
-            $mensagem->__set("status['codigo_status']", 2);
-            $mensagem->__set("status['descricao_status']", 'Sua mensagem não foi mandada. Detalhes sobre o erro ' . $mail->ErrorInfo);
-        }
+        
     }
 }
 //importacao das bibliotecas
