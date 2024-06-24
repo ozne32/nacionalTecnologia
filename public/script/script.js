@@ -11,19 +11,13 @@ $(document).ready(()=>{
     function clicavel(elemento){
         $(elemento).css('cursor', 'pointer');
     }
-    $('#card1').hover(()=>{
-        $('#card1').fadeTo(500, 1)
-    },()=>{
-        $('#card1').fadeTo(500,0.5)
-    })
-    $('#card2').hover(()=>{
-        $('#card2').fadeTo(500, 1)
-    },()=>{
-        $('#card2').fadeTo(500,0.5)
-    })
-    $('#card3').hover(()=>{
-        $('#card3').fadeTo(500, 1)
-    },()=>{
-        $('#card3').fadeTo(500,0.5)
-    })  
+    $('#nmrTel').inputmask('+99 (99)99999-9999')
+    //efeito nos cards de planos
+    for(let i = 1; i<=3; i++){
+        $(`#card${i}`).hover(()=>{
+            $(`#card${i}`).fadeTo(500, 1)
+        },()=>{
+            $(`#card${i}`).fadeTo(500,0.5)
+        })
+    }  
 })

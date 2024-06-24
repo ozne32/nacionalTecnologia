@@ -102,6 +102,12 @@ section.module.parallax::before {
         flex-direction: column;
         padding-left: 10px;
     }
+    #chatBox{
+        display: none;
+    }
+    #chat-click{
+        display:none;
+    }
   }
 
   /*Medium devices (tablets, 768px e superior)*/
@@ -111,14 +117,30 @@ section.module.parallax::before {
         flex-direction: column;
         padding-left: 10px;
     }
-  }
+    #chatBox{
+        display: none;
 
-  /*Large devices (desktops, 992px e superior)*/
-  @media (min-width:992px) {
+    }
     
+    #chat-click{
+        display:none;
+    }
+  }
+  /*Large devices (desktops, 992px e superior)*/
+  @media (max-width:992px) {
+    #chatBox .col-md-{
+        width:33%;
+    }
+  }
+  @media(min-width:993px){
+    #chatBox .col-md-{
+        width:29%;
+    }
   }
 
   /*Extra large devices (large desktops, 1200px e superior)*/
   @media (min-width:1200px) {
-    
+    #chatBox .col-md-{
+        width:29%;
+    }
   }

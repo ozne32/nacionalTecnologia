@@ -1,8 +1,8 @@
-<div class='row fixed-bottom display' id="chatBox">
-    <div class="col-md- ml-auto" style="width:29%">
+<div class='row fixed-bottom' id="chatBox">
+    <div class="col-md- ml-auto">
         <div class="card bg-light" style="margin-bottom:0">
             <div class="card-header bg-success">
-                <p class="card-title" style="font-size:13px;margin-left: 0;">Bot de boas vindas</p>
+                    <p class="card-title" style="font-size:13px;margin-left: 0;">Bot de boas vindas</p>
                 <a type="button" class="btn btn-tool" data-card-widget="remove" id="sair"
                     onmouseenter="clicavel('#sair')">
                     <i class="fas fa-times mt-2 "></i>
@@ -29,7 +29,7 @@
                             <a href="/?procura=documentacao" id="redirecionaIndex"
                                 class="btn btn-outline-success font-weight-bold mb-2"
                                 style="font-size: 0.75em; color:black;">Estou procurando a sua documentação</a>
-                            <a href="<?=$_SESSION['pag']?>" id="redirecionaMesma"
+                            <a href="<?= $_SESSION['pag'] ?>?procura=olhada" id="redirecionaMesma"
                                 class="btn btn-outline-success font-weight-bold "
                                 style="font-size: 0.75em; color:black;">Só estou dando uma olhada</a>
                         </div>
@@ -39,7 +39,11 @@
                                 <i class="fa-solid fa-user direct-chat-img fa-xl mt-3"></i>
                                 <!-- /.direct-chat-img -->
                                 <div class="direct-chat-text">
-                                    <? if ($_GET['procura'] == 'olhada') { ?>
+                                    <? if (isset($_GET['procura']) && $_GET['procura'] == 'olhada') { ?>
+                                        <script>
+                                            $('#chatBox').addClass('display')
+                                            $('#chat-click').removeClass('display')
+                                        </script>
                                         <small>Só estou dando uma olhada</small>
                                     <? } ?>
                                     <? if ($_GET['procura'] == 'preco') { ?>
@@ -78,7 +82,7 @@
                                 <a href="/?procura=documentacao" id="redirecionaIndex"
                                     class="btn btn-outline-success font-weight-bold mb-2"
                                     style="font-size: 0.75em; color:black;">Estou procurando a sua documentação</a>
-                                <a href="<?=$_SESSION['pag']?>" id="redirecionaMesma"
+                                <a href="<?= $_SESSION['pag'] ?>" id="redirecionaMesma"
                                     class="btn btn-outline-success font-weight-bold "
                                     style="font-size: 0.75em; color:black;">Só estou dando uma olhada</a>
                             </div>

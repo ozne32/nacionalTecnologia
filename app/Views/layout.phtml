@@ -14,9 +14,11 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
 </head>
 
 <body>
+
     <?= $this->content() ?>
     <footer class="mt-5" style="background-color: green;">
         <div class="container">
@@ -26,7 +28,7 @@
                         <div class="col-md-">
                             <h3 class="font-weight-normal mt-5 text-white">Entre em contato</h3> <br>
                             <i class="fa-solid fa-envelope mb-3 text-white"></i> &nbsp; <a
-                                style="color: rgb(39, 209, 39);" href="*">contato@nacionaltecnologia.com.br</a> <br>
+                                style="color: rgb(39, 209, 39);" href="/contactus">contato@nacionaltecnologia.com.br</a> <br>
                             <i class="fa-solid fa-phone mb-3 text-white"></i> <span style="color: rgb(39, 209, 39);">+55
                                 11 2122-4060</span>
                         </div>
@@ -36,9 +38,13 @@
                     <div class="row">
                         <div class="col-md-">
                             <h3 class="font-weight-normal mt-5 text-white mb-4">Empresa</h3>
-                            <p style="color: rgb(39, 209, 39);">Avenida Nicolas Boer, 399 - 3° Andar</p>
-                            <p style="color: rgb(39, 209, 39);"> Jardim das Perdizes - São Paulo - SP</p>
-                            <p style="color: rgb(39, 209, 39);"> CEP: 01140-060</p>
+                            <div onmouseenter="$('#localizacao').css('cursor','pointer')"
+                                onclick="location.href = 'https://www.google.com/maps/@-23.519786,-46.6802152,3a,90y,101.02h,85t/data=!3m6!1e1!3m4!1s9O4nOgsEsswT2bN7tGi99g!2e0!7i16384!8i8192?coh=205409&entry=ttu'"
+                                id="localizacao">
+                                <p style="color: rgb(39, 209, 39);">Avenida Nicolas Boer, 399 - 3° Andar</p>
+                                <p style="color: rgb(39, 209, 39);"> Jardim das Perdizes - São Paulo - SP</p>
+                                <p style="color: rgb(39, 209, 39);"> CEP: 01140-060</p>
+                            </div>
                         </div>
                     </div>
                 </div>
