@@ -85,6 +85,9 @@ section.module.parallax::before {
 #load{
     animation: rodar 3s linear infinite
 }
+.opaco{
+    opacity: 50%;
+}
 @keyframes rodar {
     0% {
         transform: rotate(0deg);

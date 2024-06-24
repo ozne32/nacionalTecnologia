@@ -11,5 +11,19 @@ $(document).ready(()=>{
     function clicavel(elemento){
         $(elemento).css('cursor', 'pointer');
     }
-        
+    $('#card1').hover(()=>{
+        $('#card1').fadeTo(500, 1)
+    },()=>{
+        $('#card1').fadeTo(500,0.5)
+    })
+    $('#card2').hover(()=>{
+        $('#card2').fadeTo(500, 1)
+    },()=>{
+        $('#card2').fadeTo(500,0.5)
+    })
+    $('#card3').hover(()=>{
+        $('#card3').fadeTo(500, 1)
+    },()=>{
+        $('#card3').fadeTo(500,0.5)
+    })  
 })
