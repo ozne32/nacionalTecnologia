@@ -28,6 +28,11 @@ class Route extends Bootstrap{
             'controller'=> 'indexController',
             'action'=> 'mandaEmail'
         );
+        $routes['admin']=array(
+            'route'=> '/admin',
+            'controller'=> 'indexController',
+            'action'=> 'admin'
+        );
         $this->setRoutes($routes);
     }
 }
