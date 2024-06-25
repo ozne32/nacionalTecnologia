@@ -48,3 +48,11 @@
             necessidades e oferece soluções sob medida, com qualidade, segurança e agilidade. </p>
     </div>
 </section>
+<?require_once 'chat.phtml'?>
+<?if(!isset($_GET['procura'])){?>
+    <script>
+        $(document).ready(() => {
+            $('#limite').slideUp()
+        })
+    </script>
+<?}?>

@@ -173,8 +173,10 @@ $pagina_atual = $_SESSION['pag'] = '/'
     </div>
 </div>
 <?require_once 'chat.phtml'?>
-<script>
-    $(document).ready(()=>{
-        $('#limite').slideUp()
-    })
-</script>
+<?if(!isset($_GET['procura'])){?>
+    <script>
+        $(document).ready(() => {
+            $('#limite').slideUp()
+        })
+    </script>
+<?}?>

@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    $pagina_atual = $_SESSION['pag'] = '/pricing'
+    $pagina_atual = $_SESSION['pag'] = '/pricing';
 ?>
 <header>
     <!-- Navbar -->
@@ -131,8 +131,10 @@
     </div>
 </div>
 <?require_once 'chat.phtml'?>
-<script>
-    $(document).ready(()=>{
-        $('#limite').slideUp()
-    })
-</script>
+<?if(!isset($_GET['procura'])){?>
+    <script>
+        $(document).ready(() => {
+            $('#limite').slideUp()
+        })
+    </script>
+<?}?>
