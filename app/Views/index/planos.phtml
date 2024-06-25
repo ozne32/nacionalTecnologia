@@ -130,9 +130,9 @@
         </div>
     </div>
 </div>
-<?php if(isset($_GET['procura'])){
-    require_once 'chat.phtml';
-}?>
+<?require_once 'chat.phtml'?>
 <script>
-    $('#chatBox').removeClass('display')
+    $(document).ready(()=>{
+        $('#limite').slideUp()
+    })
 </script>

@@ -20,4 +20,7 @@ $(document).ready(()=>{
             $(`#card${i}`).fadeTo(500,0.5)
         })
     }  
+    $('#click-abaixar').on('click', ()=>{
+        $('#limite').slideToggle()
+    })
 })

@@ -1,7 +1,7 @@
 <?php
-    session_start(); 
-    $pagina_atual = $_SESSION['pag'] = '/'
-?>
+session_start();
+$pagina_atual = $_SESSION['pag'] = '/'
+    ?>
 <header>
     <!-- Navbar -->
     <nav class="borda-verde navbar navbar-expand-sm navbar-white navbar-light fixed-top">
@@ -71,7 +71,7 @@
             <a href="/contactus" class="btn btn-success">Saiba mais</a>
         </div>
         <div class="col-md-5 align-self-center" id="img-computador">
-            <img src="img/cara_computador.jpg" >
+            <img src="img/cara_computador.jpg">
         </div>
     </div>
 </main>
@@ -104,8 +104,8 @@
                 </div>
                 <div style="background-color: rgb(2, 90, 2);">
                     <div class="row justify-content-center">
-                        <a href="/contactus" class="btn btn-success mt-5 mb-5"
-                            style="background-color: green;">Iniciar agora</a>
+                        <a href="/contactus" class="btn btn-success mt-5 mb-5" style="background-color: green;">Iniciar
+                            agora</a>
                     </div>
                 </div>
             </div>
@@ -134,8 +134,8 @@
                 </div>
                 <div style="background-color: rgb(2, 90, 2);">
                     <div class="row justify-content-center">
-                        <a href="/contactus" class="btn btn-success mt-5 mb-5"
-                            style="background-color: green;">Iniciar agora</a>
+                        <a href="/contactus" class="btn btn-success mt-5 mb-5" style="background-color: green;">Iniciar
+                            agora</a>
                     </div>
                 </div>
             </div>
@@ -164,17 +164,17 @@
                 </div>
                 <div style="background-color: rgb(2, 90, 2);">
                     <div class="row justify-content-center">
-                        <a href="/contactus" class="btn btn-success mt-5 mb-5"
-                            style="background-color: green;">Iniciar agora</a>
+                        <a href="/contactus" class="btn btn-success mt-5 mb-5" style="background-color: green;">Iniciar
+                            agora</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<?php if(isset($_GET['procura'])){
-    require_once 'chat.phtml';
-}?>
+<?require_once 'chat.phtml'?>
 <script>
-    $('#chatBox').removeClass('display')
+    $(document).ready(()=>{
+        $('#limite').slideUp()
+    })
 </script>
