@@ -1,0 +1,40 @@
+<div class="login-box" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)">
+    <!-- /.login-logo -->
+    <div class="card card-outline card-success">
+        <div class="card-header text-center">
+            <img src="img/logo_nacional.png" class="img-fluid" alt="">
+        </div>
+        <div class="card-body">
+            <p class="login-box-msg">Faça o login</p>
+            <!-- definir a action e método para a validação e colocar um token -->
+            <form action="/admin" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="nome" placeholder="Nome">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" name="senha" placeholder="Password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success btn-block">Login</button>
+                    </div>
+                    <?if(isset($_GET['mensagem']) && $_GET['mensagem']=='erro'){?>
+                        <small class="text-danger">Por favor, verifique se as credenciais estão certas</small>
+                    <?}?>
+                </div>
+            </form>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
