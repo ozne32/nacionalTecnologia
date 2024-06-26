@@ -88,6 +88,10 @@ section.module.parallax::before {
 .opaco{
     opacity: 50%;
 }
+.bordaInput{
+    border: 4px rgba(157, 240, 157, 0.683) solid !important;
+    border-radius: 5px;
+}
 @keyframes rodar {
     0% {
         transform: rotate(0deg);

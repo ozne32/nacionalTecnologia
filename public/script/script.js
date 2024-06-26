@@ -23,4 +23,16 @@ $(document).ready(()=>{
     $('#click-abaixar').on('click', ()=>{
         $('#limite').slideToggle()
     })
+    $('input').on('focus', e=>{
+        $(e.target).addClass('bordaInput')
+    })
+    $('input').on('blur', e=>{
+        $(e.target).removeClass('bordaInput')
+    })
+    $('textarea').on('focus', e=>{
+        $(e.target).addClass('bordaInput')
+    })
+    $('textarea').on('blur', e=>{
+        $(e.target).removeClass('bordaInput')
+    })
 })
