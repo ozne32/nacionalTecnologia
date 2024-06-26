@@ -28,10 +28,20 @@ class Route extends Bootstrap{
             'controller'=> 'indexController',
             'action'=> 'mandaEmail'
         );
-        $routes['admin']=array(
-            'route'=> '/admin',
+        $routes['adminLogin']=array(
+            'route'=> '/adminLogin',
             'controller'=> 'indexController',
-            'action'=> 'admin'
+            'action'=> 'adminLogin'
+        );
+        $routes['verificaDados']=array(
+            'route'=> '/admin',
+            'controller'=> 'adminController',
+            'action'=> 'verifica'
+        );
+        $routes['adiciona_pergunta']=array(
+            'route'=> '/adiciona_perguntas',
+            'controller'=> 'indexController',
+            'action'=> 'adiciona_perguntas'
         );
         $this->setRoutes($routes);
     }
