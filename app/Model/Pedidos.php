@@ -20,6 +20,17 @@ class Pedidos extends Model {
         $this->$attr = $valor;
         return $this;
     }
+    public function validaMensagem()
+    {
+        if (
+            empty($this->email) || empty($this->assunto) ||
+            empty($this->empresa) || empty($this->telefone) || empty($this->pergunta) 
+        ) {
+            return true; //se tudo estiver vazio retorne falso
+        } else {
+            return false;
+        }
+    }
     public function adiciona(){
         $query = "INSERT INTO tb_pedidos(nome,email,telefone,empresa,pergunta,assunto,solucionado)
         values(:nome,:email,:telefone,:empresa,:pergunta,:assunto,0)";
