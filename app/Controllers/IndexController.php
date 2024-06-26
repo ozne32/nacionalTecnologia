@@ -10,6 +10,7 @@ require __DIR__ . "/../PHPMailer/OAuth.php";
 use MF\Controller\Action;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+Use MF\Model\Container;
 
 class Mensagem
 {
@@ -59,6 +60,26 @@ class IndexController extends Action
     {
         $this->render('empresa');
     }
+    public function adminLogin(){
+        $this->render('adminLogin', 'layoutAdm');
+    }
+    // vou definir 0(false), ou seja não solucionado e 1 = a solucionado, tendo isso em vista todos começam com 
+    //não solucionado ou 0 
+    public function adiciona_perguntas(){
+        $pergunta = Container::getModel('Pedidos');
+        $pergunta->__set('nome', $_POST['nome'])->
+        __set('telefone', $_POST['telefone'])->
+        __set('email', $_POST['email'])->
+        __set('solucionado ', 0)->
+        __set('empresa', $_POST['empresa'])->
+        __set('assunto', $_POST['assunto'])->
+        __set('pergunta', $_POST['pergunta']);
+        if($pergunta->adiciona()){
+            header('location:/contactus');
+        }else{
+            header('location: /contactus?preenchimento=erro');
+        }
+    }
     public function mandaEmail()
     {
         $mensagem = new Mensagem();
@@ -86,8 +107,8 @@ class IndexController extends Action
                     $mail->isSMTP();                                            //Send using SMTP
                     $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
                     $mail->SMTPAuth = true;                                   //Enable SMTP authentication
-                    $mail->Username = 'email.com';                     //SMTP username
-                    $mail->Password = 'senha1234';                               //SMTP password
+                    $mail->Username = 'email.legal@gmail.com';                     //SMTP username
+                    $mail->Password = 'senhaSuperShow123';                               //SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
                     $mail->Port = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
                     // echo '<pre>';
